@@ -6,14 +6,16 @@ let exams = [
     { id: '2', subject: 'Rizal', date: '2025-05-15' }
 ];
 
-// GET /api/exams - Fetch all exams
+// GET /api/exams - Fetch all exams - updated for message
 router.get('/exams', (req, res) => {  
     try {
-        res.status(200).json(exams);
-        res.json({ message: "Group F API" });
+        res.status(200).json({
+            message: "Group F API",
+            exams: exams  // Include the exams array
+        });
     } catch (error) {
         res.status(500).json({ error: 'Failed to fetch exams' });
-    }     
+    }  
   });
 
 
