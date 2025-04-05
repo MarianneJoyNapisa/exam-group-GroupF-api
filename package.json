@@ -1,0 +1,37 @@
+{
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "http-status-codes": "^2.3.0",
+    "joi": "^17.13.3",
+    "mysql2": "^3.14.0",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^0.3.22",
+    "uuid": "^11.1.0"
+  },
+  "name": "exam-group-groupf-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarianneJoyNapisa/exam-group-GroupF-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarianneJoyNapisa/exam-group-GroupF-api/issues"
+  },
+  "homepage": "https://github.com/MarianneJoyNapisa/exam-group-GroupF-api#readme",
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/express": "^5.0.1",
+    "@types/joi": "^17.2.2",
+    "@types/node": "^22.14.0"
+  }
+}
