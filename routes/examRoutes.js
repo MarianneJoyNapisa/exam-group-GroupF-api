@@ -6,8 +6,14 @@ let exams = [
     { id: '2', subject: 'Rizal', date: '2025-05-15' }
 ];
 
-router.get('/exams', (req, res) => {  // wala koy sure ani pero needed sa instructions
-    res.json({ message: "Group F API" });
+// GET /api/exams - Fetch all exams
+router.get('/exams', (req, res) => {  
+    try {
+        res.status(200).json(exams);
+        res.json({ message: "Group F API" });
+    } catch (error) {
+        res.status(500).json({ error: 'Failed to fetch exams' });
+    }     
   });
 
 
