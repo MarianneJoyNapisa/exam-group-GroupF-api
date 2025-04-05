@@ -38,5 +38,22 @@ router.post('/exams', (req, res) => {
     }
 });
 
+// PUT /api/exams/:id - Update an exam
+router.put('/exams/:id', (req, res) => {
+    try {
+        const { id } = req.params;
+        const { subject, date } = req.body;
+        const examIndex = exams.findIndex(exam => exam.id === id);
+
+        if (examIndex === -1) {
+            return res.status(404).json({ error: 'Exam not found' });
+        }
+
+        exams[examIndex] = { ...exams[examIndex], subject, date };
+        res.status(200).json(exams[examIndex]);
+    } catch (error) {
+        res.status(500).json({ error: 'Failed to update exam' });
+    }
+});
 
 module.exports = router;
